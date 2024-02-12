@@ -1,4 +1,9 @@
-<?php get_header(); ?>
+	<?php
+	/* 
+	Template Name: Главная
+	 */  
+		get_header(); 
+	?>
 	<!-- Шапка -->
 	<div class="header" style="background-image: url(img/header.png)">
 		<div class="container">

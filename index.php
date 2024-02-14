@@ -45,48 +45,10 @@
 			</div>
 		</div>
 	</div>
-	<!-- Преимущества  -->
-	<div class="advantages" style="background-image: url(img/bg-advantages.png)">
-		<div class="container">
-			<h2>НАШИ ПРЕИМУЩЕСТВА</h2>
-		</div>
-	</div>
-	<div class="advantages-cards" style="background-image: url(img/background.jpg)">
-		<div class="container">
-			<div class="row advantages-cards-inner">
-				<div class="col-4 col-lg-6 col-sm-12 advantages-card">
-					<img src="img/icons/like.png" alt="">
-					<h3>СТИЛЬНЫЙ ВНЕШНИЙ ВИД</h3>
-					<p>Эксклюзивность, изысканность, долговечность и надежность - это основные достоинства наших изделий.</p>
-				</div>
-				<div class="col-4 col-lg-6 col-sm-12 advantages-card">
-					<img src="img/icons/quality.png" alt="">
-					<h3>КАЧЕСТВО ОТДЕЛКИ</h3>
-					<p>Технологический процесс, применяемый в производстве, по праву можно назвать безупречным и на сегодняшний день не имеющий аналогов на других предприятиях.</p>
-				</div>	
-				<div class="col-4 col-lg-6 col-sm-12 advantages-card">
-					<img src="img/icons/list.png" alt="">
-					<h3>АССОРТИМЕНТ</h3>
-					<p>Производство имеет возможность выпуска достаточно широкого списка продукции В нём вы найдёте эксклюзивные двери, надежные ворота, экстерьерные ограждения, современные навесы и прочие</p>
-				</div>	
-				<div class="col-4 col-lg-6 col-sm-12 advantages-card">
-					<img src="img/icons/gears.png" alt="">
-					<h3>КАЧЕСТВО СБОРКИ</h3>
-					<p>Вся продукция имеет явное преимущество в качестве сборки за счет индивидуального, а не поточного стиля организации производственного процесса. Все детали изделий проходят химическую и пескоструйную обработку.</p>
-				</div>	
-				<div class="col-4 col-lg-6 col-sm-12 advantages-card">
-					<img src="img/icons/home.png" alt="">
-					<h3>СРОК СЛУЖБЫ</h3>
-					<p>Безупречное качество отделки и высокое качество сборки могут с достоинством заявлять о длительном сроке эксплуатации наших изделий в любом регионе нашей страны.</p>
-				</div>	
-				<div class="col-4 col-lg-6 col-sm-12 advantages-card">
-					<img src="img/icons/handshake.png" alt="">
-					<h3>ИНФОРМАЦИЯ ПАРТНЕРАМ</h3>
-					<p>Для приобретения нашего товара с целью дальнейшей реализации мы предоставляем дилерам специальные условия и цены. Мы всегда открыты к диалогу и взаимовыгодному сотрудничеству.</p>
-				</div>		
-			</div>
-		</div>
-	</div>
+	<!-- Преимущества  подключаем через пхп. Название файла должно быть через дефис, тогда его можно подключить в скобках-->
+
+	<?php get_header( 'advantages' ); ?>
+	
 	<!-- О нас -->
 	<div class="about" style="background-image: url(img/bg-about.jpg)">
 		<div class="container">

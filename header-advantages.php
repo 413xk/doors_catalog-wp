@@ -1,7 +1,8 @@
 <div class="advantages" style="background-image: url(<?= CFS()->get('bg_1') ?>)">
 		<div class="container">
 			<h2>
-                <?= get_category( 6, ARRAY_A )['name']; ?>
+                <!-- строчка ниже подтягивает название категории автоматически через ID -->
+                <?= get_category( 6, ARRAY_A )['name']; ?> 
             </h2>
 		</div>
 	</div>

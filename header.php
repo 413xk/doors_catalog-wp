@@ -13,6 +13,9 @@
         if (is_404()){
             echo 'Ошибка 404';
         } 
+		elseif(is_category( 'doors' )){
+			echo single_cat_title();
+		}
         else {
             the_title();
         }

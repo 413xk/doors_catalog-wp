@@ -28,7 +28,7 @@
                         <?php the_content(); ?>
 
                     </div>	
-                    <?php
+                <?php
                 }
                 wp_reset_postdata();
                 ?>

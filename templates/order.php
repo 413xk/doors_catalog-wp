@@ -47,5 +47,6 @@
       </div>
     </div>
   </div>
-  <!-- Футер -->
-    <?php get_footer(); ?>
+
+    <?php get_footer(); ?> 
+    

@@ -5,151 +5,139 @@
 		get_header(); 
 	?>
 	<!-- Шапка -->
-	<div class="header" style="background-image: url(img/header.png)">
+	<div class="header" style="background-image: url(<?= CFS()->get('header_bg') ?>)">
 		<div class="container">
 			<div class="row">
 				<div class="col-6 col-lg-12">
 					<div class="header-inner">
-						<div class="header-catalog">
-							<h2>Каталог</h2>
+					<div class="header-catalog">
+							<h2><?= CFS()->get('catalog_title') ?></h2>
 							<div class="doors">
-								<div class="door">
-									<div class="name" style="background-image: url(img/door1.jpg)">Модели глухие</div>
-								</div>
-								<div class="door">
-									<div class="name" style="background-image: url(img/door2.jpg)">Модели со стеклом</div>
-								</div>
-								<div class="door">
-									<div class="name" style="background-image: url(img/door3.jpg)">Увеличенного формата</div>
-								</div>
+							<?php
+								$loop = CFS() -> get('catalog');
+								foreach($loop as $row){
+									?>
+									<div class="door">
+										<div class="name" style="background-image: url(<?= $row['catalog_img'] ?>)"><?= $row['catalog_text'] ?></div>
+									</div>
+									<?php
+								}
+							?>
 							</div>
-							<a class="btn" href="catalog.html">Смотреть</a>
+							<a class="btn" href="category/<?= CFS()->get('catalog_btn_link') ?>"><?= CFS()->get('catalog_btn_text') ?></a>
 						</div>
 						<div class="header-order">
-							<h2>На заказ</h2>
+							<h2><?= CFS()->get('order_title') ?></h2>
 							<div class="doors">
-								<div class="door">
-									<div class="name" style="background-image: url(img/door1.png)">Ворота</div>
-								</div>
-								<div class="door">
-									<div class="name" style="background-image: url(img/door2.png)">Заборы и ограждения</div>
-								</div>
-								<div class="door">
-									<div class="name" style="background-image: url(img/door3.png)">Навесы</div>
-								</div>
+							<?php
+								$loop = CFS() -> get('order');
+								foreach($loop as $row){
+									?>
+									<div class="door">
+										<div class="name" style="background-image: url(<?= $row['order_img'] ?>)"><?= $row['order_text'] ?></div>
+									</div>
+									<?php
+								}
+							?>
 							</div>
-							<a class="btn" href="order.html">Смотреть</a>
+							<a class="btn" href="<?= CFS()->get('order_btn_link') ?>"><?= CFS()->get('order_btn_text') ?></a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<!-- Преимущества  подключаем через пхп. Название файла должно быть через дефис, тогда его можно подключить в скобках-->
 
+	<!-- Преимущества  подключаем через пхп. Название файла должно быть через дефис, тогда его можно подключить в скобках-->
 	<?php get_header( 'advantages' ); ?>
 	
 	<!-- О нас -->
-	<div class="about" style="background-image: url(img/bg-about.jpg)">
+	<div class="about" style="background-image: url(<?= CFS()->get('about_bg') ?>)">
 		<div class="container">
 			<div class="row about-inner">
 				<div class="col-6 col-lg-12">
-					<h2>ZHOVNER – ЭТО ВЫСОКОКАЧЕСТВЕННЫЙ ПРОДУКТ, <span>ПРОИЗВОДЯЩИЙСЯ В РОССИИ.</span></h2>
-					<p>Двери ZHOVNER избавят вас от тревоги за сохранность Вашей собственности. Залог качества и надежности - отечественное производство. Наше предприятие находится в городе Крымск Краснодарского края.</p>
+					<h2><?= CFS()->get('about_title') ?></span></h2>
+					<p><?= CFS()->get('about_text') ?></p>
 				</div>
 				<div class="col-6 col-lg-12 text-center">
-					<a href="catalog.html" class="btn">Перейти в каталог</a>
+					<a href="category/<?= CFS()->get('catalog_btn_link') ?>" class="btn"><?= CFS()->get('about_btn') ?></a>
 				</div>
 			</div>
 		</div>
 	</div>
+
 	<!-- Популярные товары -->
-	<div class="popular" style="background-image: url(img/background.jpg)">
+	<div class="popular" style="background-image: url(<?= CFS()->get('bg_2') ?>)">
 		<div class="container">
 			<div class="row popular-title">
-				<h2>ПОПУЛЯРНЫЕ ТОВАРЫ</h2>
+				<h2><?= CFS()->get('popular_title') ?></h2>
 			</div>
 			<div class="row popular-goods">
-				<div class="col-3 col-lg-6 col-sm-12 product">
-					<img src="img/сatalog/door_anglia.png" alt="Название">
-					<h3>Название</h3>
-					<div>45000 &#8381;</div>
-					<a href="door.html" class="btn">Подробнее</a>
-				</div>
-				<div class="col-3 col-lg-6 col-sm-12 product">
-					<img src="img/сatalog/door_anglia.png" alt="Название">
-					<h3>Название</h3>
-					<div>45000 &#8381;</div>
-					<a href="door.html" class="btn">Подробнее</a>
-				</div>
-				<div class="col-3 col-lg-6 col-sm-12 product">
-					<img src="img/сatalog/door_anglia.png" alt="Название">
-					<h3>Название</h3>
-					<div>45000 &#8381;</div>
-					<a href="door.html" class="btn">Подробнее</a>
-				</div>
-				<div class="col-3 col-lg-6 col-sm-12 product">
-					<img src="img/сatalog/door_anglia.png" alt="Название">
-					<h3>Название</h3>
-					<div>45000 &#8381;</div>
-					<a href="door.html" class="btn">Подробнее</a>
-				</div>
-				<div class="col-3 col-lg-6 col-sm-12 product">
-					<img src="img/сatalog/door_anglia.png" alt="Название">
-					<h3>Название</h3>
-					<div>45000 &#8381;</div>
-					<a href="door.html" class="btn">Подробнее</a>
-				</div>
-				<div class="col-3 col-lg-6 col-sm-12 product">
-					<img src="img/сatalog/door_anglia.png" alt="Название">
-					<h3>Название</h3>
-					<div>45000 &#8381;</div>
-					<a href="door.html" class="btn">Подробнее</a>
-				</div>
-				<div class="col-3 col-lg-6 col-sm-12 product">
-					<img src="img/сatalog/door_anglia.png" alt="Название">
-					<h3>Название</h3>
-					<div>45000 &#8381;</div>
-					<a href="door.html" class="btn">Подробнее</a>
-				</div>
-				<div class="col-3 col-lg-6 col-sm-12 product">
-					<img src="img/сatalog/door_anglia.png" alt="Название">
-					<h3>Название</h3>
-					<div>45000 &#8381;</div>
-					<a href="door.html" class="btn">Подробнее</a>
-				</div>
+			<?php 
+				$posts = get_posts(array(
+				'numberposts' => 8,
+				'category_name' => 'doors_popular',
+				'orderby' => 'title',
+				'order' => 'ASC',
+				'post_type' => 'post',
+				'suppress_filters' => true,
+				)); 
+				foreach($posts as $post){
+					setup_postdata($post)
+			?>
+						<div class="col-3 col-lg-6 col-sm-12 product">
+							<?php the_post_thumbnail(); ?>
+							<h3><?php the_title(); ?></h3>
+							<div><?= CFS()->get('doors_price') ?> &#8381;</div>
+							<a href="<?php the_permalink(); ?>" class="btn"><?= CFS()->get('doors_more') ?></a> 
+						</div>
+				<?php
+				}
+				wp_reset_postdata();
+				?>
 			</div>
 			<div class="row">
 				<div class="col-12 text-center">
-					<a href="catalog.html" class="btn">Перейти в каталог</a>
+					<a href="category/<?= CFS()->get('catalog_btn_link') ?>" class="btn"><?= CFS()->get('about_btn') ?></a>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- Форма обратной связи -->
-	<div class="contacts" style="background-image: url(img/bg-contacts.png)">
+	<div class="contacts" style="background-image: url(<?= CFS()->get('form_bg') ?>)">
 		<div class="container">
 			<div class="row">
 				<div class="col-4 col-lg-12 contacts-item">
-					<h3>Закажите звонок специалиста</h3>
-					<p>Вы можете заказать звонок нашего специалиста в удобное для Вас время.</p>
-					<form action="">
-						<input type="text" placeholder="Имя">
-						<input type="text" placeholder="Телефон">
-						<input type="text" placeholder="Когда позвонить?">
-						<button class="btn">Заказать звонок</button>
-					</form>
+					<h3><?= CFS()->get('form_title') ?></h3>
+					<p><?= CFS()->get('form_text') ?></p>
+					<?= do_shortcode( CFS()->get('form_shortcode') ); ?>
 				</div>
-				<div class="col-4 col-lg-6 col-sm-12 text-center contacts-item">
-					<img src="img/icons/tag.png" alt="Подробно">
-					<h3>Подробно</h3>
-					<p>Наши специалисты помогут Вам в выборе нужной двери.</p>
-				</div>
-				<div class="col-4 col-lg-6 col-sm-12 text-center contacts-item">
-					<img src="img/icons/clock.png" alt="Быстро">
-					<h3>Быстро</h3>
-					<p>Мы стараемся максимально быстро ответить на Ваш запрос.</p>
-				</div>
+
+				<?php 
+                $posts = get_posts( [
+                    'numberposts' => 2,
+                    'category_name' => 'form',
+                    'orderby' => 'title',
+                    'order' => 'ASC',
+                    'post_type' => 'post',
+                    'suppress_filter' => true
+                ] );
+                foreach($posts as $post){
+                    setup_postdata( $post );
+                    ?>
+					<div class="col-4 col-lg-6 col-sm-12 text-center contacts-item">
+						<?php the_post_thumbnail( 'adv_thumbnail' ); ?>
+						<h3><?php the_title(); ?></h3>
+						<?php the_content(); ?>
+					</div>
+
+                <?php
+                }
+                wp_reset_postdata();
+                ?>
+
+
+
 			</div>
 		</div>
 	</div>

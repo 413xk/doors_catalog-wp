@@ -41,6 +41,7 @@ input, textarea {
 }
 .col-6 {
   width: 50%;
+  position: center;
 }
 .col-9 {
   width: 75%;

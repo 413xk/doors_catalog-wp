@@ -11,8 +11,9 @@
                         'items_wrap' => '%3$s'
                     ]);
                     ?>
+                        <!-- блогинфо навстраивается в кастомайз -->
+                    <span class="accent-color">&copy; </span> <?= bloginfo( 'name' ); ?>, 2001-<?=date('Y'); ?>
 					<!-- <a href="policy.html">Политика конфиденциальности</a>  Удаляем статическое отображение в нижней части страницы-->
-                    <span class="accent-color">&copy; </span> Двери Жовнер, 2021
 				</div>
 			</div>
 		</div>

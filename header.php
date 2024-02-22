@@ -54,8 +54,22 @@
                 ]);
                 ?>
 				<div class="phone">
-					<a href="tel:+79186687673">&#9742; +7 (918) 668-76-73</a>
+					<?php 
+						$settings = get_posts([
+							'numberposts' => 1,
+							'category_name' => 'settings',
+							'post_type' => 'post',
+						]); 
+						foreach($settings as $post){
+							setup_postdata($post)
+						?>
+							<a href="tel:<?= CFS()->get('header_phone_link'); ?>">&#9742; <?= CFS()->get('header_phone'); ?></a>
+							<?php
+						}
+						wp_reset_postdata();
+						?>
 				</div>
 			</div>
 		</div>
 	</div>
+	
